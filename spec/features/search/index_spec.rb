@@ -7,8 +7,6 @@ RSpec.describe Search: :Index do
 
     click_button 'Search For Members'
 
-    save_and_open_page
-
-    expect(page).to have_content "Aang"
+    expect(page).to have_content 'Aang'
   end
 end
