@@ -6,7 +6,7 @@ RSpec.describe MemberService do
       response = MemberService.member_search_by_affiliation('Water Tribe')
 
       expect(response).to be_a Array
-      expect(response.count).to eq 20
+      expect(response.count).to eq 44
 
       first_member = response.first
 
@@ -22,7 +22,7 @@ RSpec.describe MemberService do
       response = MemberService.member_search_by_affiliation('Fire Nation')
 
       expect(response).to be_a Array
-      expect(response.count).to eq 20
+      expect(response.count).to eq 97
 
       first_member = response.first
 
@@ -31,6 +31,20 @@ RSpec.describe MemberService do
       expect(first_member).to have_key :enemies
       expect(first_member).to have_key :affiliation
       expect(first_member).to have_key :_id
+    end
+
+    it 'gets all members of earth kingdom' do
+      response = MemberService.member_search_by_affiliation('Earth Kingdom')
+
+      expect(response).to be_a Array
+      expect(response.count).to eq 76
+    end
+
+    it 'gets all members of air nomads' do
+      response = MemberService.member_search_by_affiliation('Air Nomads')
+
+      expect(response).to be_a Array
+      expect(response.count).to eq 15
     end
   end
 end

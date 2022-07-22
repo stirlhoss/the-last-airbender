@@ -2,7 +2,7 @@ class MemberService
   class << self
 
     def member_search_by_affiliation(affiliation)
-      call_api("/api/v1/characters?affiliation=#{affiliation}")
+      call_api("/api/v1/characters?perPage=100&affiliation=#{affiliation}")
     end
 
     private
