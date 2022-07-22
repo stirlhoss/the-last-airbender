@@ -1,4 +1,4 @@
-class MemberFacade
+class SearchFacade
   class << self
     def member_by_affiliation(affiliation)
       parsed_json = MemberService.member_search_by_affiliation(affiliation)

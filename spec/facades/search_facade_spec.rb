@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe MemberFacade do
+RSpec.describe SearchFacade do
   describe 'member_by_affiliation' do
     it 'searches through characters with a specific affiliation and turns them into poros' do
-      expected = MemberFacade.member_by_affiliation('Water Tribe')
+      expected = SearchFacade.member_by_affiliation('Water Tribe')
 
       expect(expected.class).to eq Array
       expect(expected).to be_all Member
